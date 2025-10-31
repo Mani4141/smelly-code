@@ -1,3 +1,11 @@
+# Refactoring
+
+One of the main issues I noticed was duplicated code. Each button (increment, decrement, and reset) repeated the same few lines that updated the counter display, the page title, and the background color. To fix this, I created a single helper function called updateUI() that handles all those updates in one place. This made the code much shorter and easier to change later if I ever want to tweak how the display works.
+
+Another problem was the use of unclear variable names like c, a, and b. I renamed them to be more descriptive names such as count, INCREMENT_ID, and COUNTER_ID so it’s immediately clear what they represent. Now the code makes more sense just by reading it, without needing extra comments.
+
+There were also magic strings in the original version—IDs like "increment", "dec", and "reset" were written directly into the code multiple times. I fixed this by creating constants for all the IDs. This makes it easier to change an element’s ID in one place without needing to hunt through the code.
+
 # Section 5 – Refactoring Code Smells in Practice
 
 This activity is designed to help you practice identifying code smells and applying refactoring patterns to a real codebase in CMPM 121, Game Development Patterns.
